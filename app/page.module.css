@@ -33,11 +33,11 @@
 }
 
 .foto {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--accent);
+  border: 3px solid var(--accent);
   flex-shrink: 0;
 }
 
@@ -128,4 +128,76 @@
   background: var(--accent-soft);
   border-radius: 20px;
   padding: 5px 12px;
+}
+
+.seccionSobreMi {
+    padding: 20px 0 100px; 
+} 
+
+.parrafoSobreMi { 
+    color: var(--ink-muted); 
+    line-height: 1.8; 
+    font-size: 17px; 
+    max-width: 640px; 
+    margin-bottom: 16px; 
+} 
+
+.botonesAccion { 
+    display: flex;
+    gap: 14px; 
+    margin-top: 24px; 
+    flex-wrap: wrap; 
+} 
+
+.botonCV {
+    padding: 12px 26px; 
+    border-radius: 30px; 
+    font-size: 14px; 
+    background: var(--accent); 
+    color: var(--bg); 
+    display: inline-block; 
+} 
+
+.seccionContacto { 
+    padding: 20px 0 100px; 
+} 
+
+.enlacesContacto { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
+    font-size: 17px; 
+} 
+
+.enlaceContacto { 
+    color: var(--ink-muted); 
+    transition: color 0.15s ease; 
+} 
+
+.enlaceContacto:hover { 
+    color: var(--accent); 
+} 
+
+.footer { 
+    border-top: 1px solid var(--line); 
+    padding: 30px 0; 
+    text-align: center; 
+    color: var(--ink-muted); 
+    font-size: 13px; 
+}
+
+.navIconos { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+} 
+
+.navIcono { 
+    color: var(--ink-muted); 
+    transition: color 0.15s ease; 
+    display: flex; 
+} 
+
+.navIcono:hover { 
+    color: var(--accent); 
 }

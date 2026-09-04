@@ -31,13 +31,15 @@
   margin-bottom: 40px;
 }
 
-.stackTag {
-  font-size: 12px;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 20px;
-  padding: 5px 12px;
-}
+.stackTag { 
+  font-size: 12px; 
+  color: var(--accent); 
+  background: var(--accent-soft); 
+  border-radius: 20px; 
+  padding: 5px 12px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; }
 
 .seccion {
   margin-bottom: 40px;
@@ -103,4 +105,28 @@
 .botonSecundario {
   border: 1px solid var(--line);
   color: var(--ink);
+}
+
+.iconosSociales {
+  display: flex; 
+  gap: 16px; 
+} 
+
+.iconoSocial { 
+  width: 48px; 
+  height: 48px; 
+  border-radius: 50%; 
+  background: var(--panel); 
+  border: 1px solid var(--line); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: var(--ink-muted); 
+  transition: all 0.2s ease; 
+} 
+
+.iconoSocial:hover {
+  color: var(--accent); 
+  border-color: var(--accent); 
+  transform: translateY(-3px); 
 }

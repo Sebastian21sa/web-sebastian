@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { proyectos } from '../../../data/proyectos'
 import { fraunces, inter } from '../../../lib/fonts'
 import styles from './page.module.css'
+import { iconosStack } from '../../../lib/icons'
 
 export function generateStaticParams() {
   return proyectos.map((p) => ({ slug: p.slug }))
@@ -24,9 +25,10 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
       <h1 className={`${styles.titulo} ${fraunces.className}`}>{proyecto.titulo}</h1>
 
       <div className={styles.stackContenedor}>
-        {proyecto.stack.map((t) => (
-          <span key={t} className={styles.stackTag}>{t}</span>
-        ))}
+        {proyecto.stack.map((t) => { const Icono = iconosStack[t] 
+          return ( 
+          <span key={t} className={styles.stackTag}> {Icono && <Icono size={14} />} {t} 
+          </span> ) })}
       </div>
 
       <div className={styles.seccion}>

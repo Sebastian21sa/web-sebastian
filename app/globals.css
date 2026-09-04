@@ -1,12 +1,12 @@
-:root {
-  --bg: #241c18;
-  --panel: #2e2420;
-  --panel-hover: #362b25;
-  --ink: #f4ede4;
-  --ink-muted: #b8a99b;
-  --accent: #d97747;
-  --accent-soft: rgba(217, 119, 71, 0.14);
-  --line: rgba(244, 237, 228, 0.1);
+:root { 
+    --bg: #1e2530; 
+    --panel: #262e3b; 
+    --panel-hover: #2e3745; 
+    --ink: #f0f2f5; 
+    --ink-muted: #9aa5b5; 
+    --accent: #7fcbe8; 
+    --accent-soft: rgba(127, 203, 232, 0.14); 
+    --line: rgba(240, 242, 245, 0.1); 
 }
 
 * {

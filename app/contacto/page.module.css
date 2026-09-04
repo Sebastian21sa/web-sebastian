@@ -1,0 +1,66 @@
+.contenedor {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 120px;
+  min-height: 60vh;
+}
+
+.titulo {
+  font-size: 44px;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.parrafo {
+  color: var(--ink-muted);
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 540px;
+  margin-bottom: 50px;
+}
+
+.opcionesContacto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+}
+
+.opcionContacto {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: all 0.2s ease;
+}
+
+.opcionContacto:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.iconoContacto {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.textoContacto {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelContacto {
+  font-size: 12px;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.valorContacto {
+  font-size: 16px;
+  color: var(--ink);
+}
