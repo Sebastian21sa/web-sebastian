@@ -130,3 +130,9 @@
   border-color: var(--accent); 
   transform: translateY(-3px); 
 }
+
+@media (max-width: 640px) { 
+  .titulo { 
+    font-size: 28px; 
+  } 
+}

@@ -91,15 +91,15 @@
   transition: all 0.25s ease;
 }
 
-.tarjeta:hover {
-  background: var(--panel-hover);
-  border-color: var(--accent);
+.tarjeta:hover { 
+  background: var(--panel-hover); 
+  border-color: var(--accent-2); 
 }
 
-.numeroProyecto {
-  font-size: 13px;
-  color: var(--accent);
-  letter-spacing: 1px;
+.numeroProyecto { 
+  font-size: 13px; 
+  color: var(--accent-2); 
+  letter-spacing: 1px; 
 }
 
 .tituloProyecto {
@@ -122,12 +122,15 @@
   flex-wrap: wrap;
 }
 
-.stackTag {
-  font-size: 12px;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 20px;
-  padding: 5px 12px;
+.stackTag { 
+  font-size: 12px; 
+  color: var(--ink); 
+  background: var(--panel-hover); 
+  border-radius: 20px; 
+  padding: 5px 12px; 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
 }
 
 .seccionSobreMi {
@@ -200,4 +203,27 @@
 
 .navIcono:hover { 
     color: var(--accent); 
+}
+
+@media (max-width: 640px) { 
+  
+  .titulo { 
+    font-size: 34px; 
+  } 
+  
+  .hero { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 40px 0 50px; 
+  } 
+  
+  .navLinks { 
+    gap: 12px; 
+    font-size: 13px; 
+  } 
+  
+  .navContenido { 
+    flex-wrap: wrap; 
+    gap: 10px; 
+  } 
 }

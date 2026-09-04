@@ -6,18 +6,21 @@
     --ink-muted: #9aa5b5; 
     --accent: #7fcbe8; 
     --accent-soft: rgba(127, 203, 232, 0.14); 
-    --line: rgba(240, 242, 245, 0.1); 
+    --line: rgba(240, 242, 245, 0.1);
+    --accent-2: #ff8a5c; 
+    --accent-3: #b48cff; 
+    --accent-4: #5cd6a9; 
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-}
+body { 
+  margin: 0; 
+  background: radial-gradient(circle at 15% 20%, rgba(127, 203, 232, 0.12), transparent 35%), radial-gradient(circle at 85% 15%, rgba(255, 138, 92, 0.1), transparent 35%), radial-gradient(circle at 75% 80%, rgba(180, 140, 255, 0.1), transparent 35%), radial-gradient(circle at 20% 85%, rgba(92, 214, 169, 0.08), transparent 35%), var(--bg); 
+  background-attachment: fixed; 
+  color: var(--ink); }
 
 a {
   color: inherit;

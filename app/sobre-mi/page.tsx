@@ -3,6 +3,9 @@ import FadeIn from '../../components/FadeIn'
 import { habilidades } from '../../data/habilidades'
 import { fraunces, inter } from '../../lib/fonts'
 import styles from './page.module.css'
+export const metadata = { 
+    title: 'Sobre mi - Sebastian Sanchez', description: 'Ingeniero de Sistemas y Computacion especializado en IA. Conoce mi historia, habilidades y trayectoria.', 
+}
 
 export default function SobreMi() {
   return (

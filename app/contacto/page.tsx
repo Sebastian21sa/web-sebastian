@@ -19,54 +19,35 @@ export default function Contacto() {
             tecnologia, IA, o tenis de mesa.
           </p>
           <div className={styles.opcionesContacto}>
-            <a
-              href="mailto:sebastian2105sanchez@gmail.com"
-              className={styles.opcionContacto}
-            >
-              <FaEnvelope size={22} className={styles.iconoContacto} />
+            <a href="mailto:sebastian2105sanchez@gmail.com" className={styles.opcionContacto}>
+              <FaEnvelope size={22} className={styles.iconoContacto} style={{ color: 'var(--accent-4)' }} />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>Email</span>
-                <span className={styles.valorContacto}>
-                  sebastian2105sanchez@gmail.com
-                </span>
+                <span className={styles.valorContacto}>sebastian2105sanchez@gmail.com</span>
               </div>
             </a>
-            <a
-              href="https://www.linkedin.com/in/sebasti%C3%A1n-s%C3%A1nchez-0ab0b6314/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.opcionContacto}
-            >
-              <FaLinkedin size={22} className={styles.iconoContacto} />
+
+            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-s%C3%A1nchez-0ab0b6314/" target="_blank" rel="noopener noreferrer" className={styles.opcionContacto}>
+              <FaLinkedin size={22} className={styles.iconoContacto} style={{ color: '#0A66C2' }} />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>LinkedIn</span>
                 <span className={styles.valorContacto}>Sebastian Sanchez</span>
               </div>
             </a>
-            <a
-              href="https://github.com/Sebastian21sa"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.opcionContacto}
-            >
-              <FaGithub size={22} className={styles.iconoContacto} />
+
+            <a href="https://github.com/Sebastian21sa" target="_blank" rel="noopener noreferrer" className={styles.opcionContacto}>
+              <FaGithub size={22} className={styles.iconoContacto} style={{ color: 'var(--ink)' }} />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>GitHub</span>
                 <span className={styles.valorContacto}>Sebastian21sa</span>
               </div>
             </a>
-            <a
-              href="https://www.instagram.com/sebastian.sanchez2105"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.opcionContacto}
-            >
-              <FaInstagram size={22} className={styles.iconoContacto} />
+
+            <a href="https://www.instagram.com/sebastian.sanchez2105" target="_blank" rel="noopener noreferrer" className={styles.opcionContacto}>
+              <FaInstagram size={22} className={styles.iconoContacto} style={{ color: '#E1306C' }} />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>Instagram</span>
-                <span className={styles.valorContacto}>
-                  sebastian.sanchez2105
-                </span>
+                <span className={styles.valorContacto}>sebastian.sanchez2105</span>
               </div>
             </a>
           </div>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { proyectos } from '../data/proyectos'
 import { fraunces, inter } from '../lib/fonts'
 import styles from './page.module.css'
-import { iconosStack } from '../lib/icons'
+import { iconosStack, coloresStack } from '../lib/icons'
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import Nav from '../components/Nav'
 import FadeIn from '../components/FadeIn'
@@ -54,9 +54,13 @@ export default function Home() {
                   <div className={styles.stackContenedor}>
                     {p.stack.map((t) => {
                       const Icono = iconosStack[t]
+                      const color = coloresStack[t]
                       return (
                         <span key={t} className={styles.stackTag}>
-                          {Icono && <Icono size={14} />} {t}
+                          {
+                          Icono && <Icono size={14} 
+                          color= {color}/>
+                          } {t}
                         </span>
                       )
                     })}

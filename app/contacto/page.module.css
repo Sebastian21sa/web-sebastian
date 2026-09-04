@@ -43,9 +43,8 @@
   transform: translateX(4px);
 }
 
-.iconoContacto {
-  color: var(--accent);
-  flex-shrink: 0;
+.iconoContacto { 
+    flex-shrink: 0; 
 }
 
 .textoContacto {
@@ -63,4 +62,10 @@
 .valorContacto {
   font-size: 16px;
   color: var(--ink);
+}
+
+@media (max-width: 640px) { 
+    .titulo { 
+        font-size: 30px; 
+    } 
 }
