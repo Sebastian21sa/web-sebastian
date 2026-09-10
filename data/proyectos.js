@@ -1,12 +1,53 @@
 export const proyectos = [
   {
-    slug: 'analizador-tenis-mesa',
-    numero: '01',
-    titulo: 'Analizador de Tecnica - Tenis de Mesa',
-    resumen: 'Sistema de vision por computador y deep learning que analiza la tecnica del drive y el reves a partir de un video, entrenado con un dataset propio.',
-    stack: ['Python', 'TensorFlow', 'MediaPipe', 'Flask', 'React', 'Docker'],
-    anio: '2026',
-    repo: 'https://github.com/Sebastian21sa/analizador-tenis-mesa',
-    demo: 'https://pongiq-murex.vercel.app',
+    slug: "analizador-tenis-mesa",
+    numero: "01",
+    titulo: "Analizador de Tecnica - Tenis de Mesa",
+    resumen:
+      "Sistema de vision por computador y deep learning que analiza la tecnica del drive y el reves a partir de un video, entrenado con un dataset propio.",
+    stack: ["Python", "TensorFlow", "MediaPipe", "Flask", "React", "Docker"],
+    anio: "2026",
+    repo: "https://github.com/Sebastian21sa/analizador-tenis-mesa",
+    demo: "https://pongiq-murex.vercel.app",
+    elProblema:
+      "Jugue tenis de mesa competitivamente durante buena parte de mi vida. Al cursar una especializacion en Inteligencia Artificial, quise construir algo que combinara ambas cosas: aplicar vision por computador y deep learning a un problema donde mi criterio como jugador realmente importa.",
+    comoFunciona:
+      "El usuario sube un video (o graba en vivo) ejecutando un drive o un reves. El sistema extrae los puntos clave del cuerpo con MediaPipe Pose, calcula angulos articulares (codo, cadera, altura de muneca) definidos a partir de criterios tecnicos reales de tenis de mesa, y un modelo de red neuronal (TensorFlow), entrenado con un dataset propio de 71 repeticiones grabadas y etiquetadas manualmente, predice si la ejecucion fue correcta o incorrecta.",
+    resultados: [
+      { label: "Drive (accuracy)", valor: "74% +/- 13%" },
+      { label: "Reves (accuracy)", valor: "76% +/- 15%" },
+    ],
+    limitaciones: [
+      "Dataset pequeno (71 repeticiones): valida el enfoque, no es suficiente para produccion real.",
+      "Sensibilidad fuera de distribucion: el modelo asume que el usuario selecciona correctamente el golpe.",
+      "Sensibilidad al angulo de camara: dataset ampliandose actualmente a 4 angulos distintos.",
+    ],
   },
-]
+  {
+    slug: "simulador-compostaje",
+    numero: "02",
+    titulo: "Simulador de Compostaje",
+    resumen:
+      "Aplicacion web que evalua la calidad del compost combinando un modelo de Machine Learning entrenado con datos reales de sensores y un modulo de vision por computador que detecta contaminantes en fotos.",
+    stack: ["Next.js", "TypeScript", "Python", "Computer Vision"],
+    anio: "2026",
+    repo: "https://github.com/Sebastian21sa/simulador-compostaje",
+    demo: "https://v0-composting-simulator.vercel.app",
+    elProblema:
+      "El proyecto nacio como una demo con calculo heuristico (no entrenado) presentada como si fuera Machine Learning. Lo evolucione a un sistema con modelos realmente entrenados, agregando ademas un modulo de vision por computador para evaluar contaminacion visual del compost a partir de fotos.",
+    comoFunciona:
+      "Un RandomForestRegressor predice el Score de calidad del compost (0-100) a partir de parametros como temperatura y humedad, entrenado con 452 muestras reales tomadas con sensores (Arduino Mega + ESP-32) durante procesos de compostaje reales (dataset publico de hafsa-kibria, CC BY 4.0). En paralelo, un RandomForestClassifier categoriza esa prediccion en niveles de calidad. Para la deteccion de contaminantes, entrene una CNN compacta desde cero (sin transfer learning, por restricciones del entorno de entrenamiento) sobre un dataset publico de Johns Hopkins University (Roboflow, CC BY 4.0), reagrupando 38 clases originales en 2 (compostable / contaminante).",
+    resultados: [
+      { label: "Regresor (R2)", valor: "0.828" },
+      { label: "Regresor (RMSE)", valor: "7.18" },
+      { label: "Regresor (MAE)", valor: "4.57" },
+      { label: "Clasificador (accuracy)", valor: "76.6%" },
+      { label: "Detector de contaminantes (accuracy)", valor: "71.6%" },
+    ],
+    limitaciones: [
+      "El detector de contaminantes entrena una CNN desde cero sin transfer learning (por restricciones del entorno), lo cual limita su accuracy (71.6%) frente a lo que lograria una arquitectura preentrenada.",
+      "Los datasets usados son publicos, no propios: utiles para validar el enfoque, pero no reflejan necesariamente las condiciones especificas de cada usuario real.",
+      "Todo el sistema vive dentro de un unico proyecto Next.js, sin backend separado — decision consciente de simplicidad de despliegue.",
+    ],
+  },
+];
