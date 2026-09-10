@@ -6,6 +6,7 @@ import { iconosStack, coloresStack } from '../lib/icons'
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import Nav from '../components/Nav'
 import FadeIn from '../components/FadeIn'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -72,9 +73,7 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      <footer className={styles.footer}>
-        Sebastian Sanchez - {new Date().getFullYear()}
-      </footer>
+      <Footer />
     </div>
   )
 }

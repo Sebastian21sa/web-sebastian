@@ -3,9 +3,23 @@ import FadeIn from '../../components/FadeIn'
 import { habilidades } from '../../data/habilidades'
 import { fraunces, inter } from '../../lib/fonts'
 import styles from './page.module.css'
-export const metadata = { 
-    title: 'Sobre mi - Sebastian Sanchez', description: 'Ingeniero de Sistemas y Computacion especializado en IA. Conoce mi historia, habilidades y trayectoria.', 
+import Footer from '../../components/Footer'
+
+
+
+export const metadata = {
+  title: 'Sobre mi - Sebastian Sanchez',
+  description: 'Ingeniero de Sistemas y Computacion especializado en IA. Conoce mi historia, habilidades y trayectoria.',
 }
+
+const timeline = [
+  { anio: 'Ninez y adolescencia', titulo: 'Jugador de tenis de mesa', desc: 'Entrene y competi activamente, desarrollando el criterio tecnico que mas tarde aplicaria en codigo.' },
+  { anio: '2020', titulo: 'Bachillerato', desc: 'Institucion Educativa Departamental Serrezuela.' },
+  { anio: '2026', titulo: 'Ingenieria de Sistemas y Computacion', desc: 'Universidad de Cundinamarca.' },
+  { anio: '2026', titulo: 'Especializacion en Inteligencia Artificial', desc: 'Universidad de Cundinamarca.' },
+  { anio: '2026', titulo: 'Analizador de Tecnica - Tenis de Mesa', desc: 'Proyecto insignia: vision por computador y deep learning aplicado a mi propio deporte.' },
+  { anio: '2026', titulo: 'Simulador de Compostaje', desc: 'Evolucion de un proyecto academico a un sistema con modelos reales de ML y vision por computador.' },
+]
 
 export default function SobreMi() {
   return (
@@ -62,6 +76,23 @@ export default function SobreMi() {
 
         <FadeIn>
           <h2 className={`${styles.tituloSub} ${fraunces.className}`}>
+            Mi camino
+          </h2>
+          <div className={styles.timeline}>
+            <div className={styles.timelineLinea}></div>
+            {timeline.map((item, i) => (
+              <div key={i} className={styles.timelineItem}>
+                <div className={styles.timelineDot}></div>
+                <p className={styles.timelineAnio}>{item.anio}</p>
+                <p className={styles.timelineTitulo}>{item.titulo}</p>
+                <p className={styles.timelineDesc}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <h2 className={`${styles.tituloSub} ${fraunces.className}`}>
             Un poco mas de mi
           </h2>
           <div className={styles.galeria}>
@@ -83,6 +114,7 @@ export default function SobreMi() {
           </div>
         </FadeIn>
       </div>
+      <Footer />
     </div>
   )
 }

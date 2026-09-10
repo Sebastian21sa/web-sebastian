@@ -3,6 +3,7 @@ import FadeIn from '../../components/FadeIn'
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import { fraunces, inter } from '../../lib/fonts'
 import styles from './page.module.css'
+import Footer from '../../components/Footer'
 
 export default function Contacto() {
   return (
@@ -53,6 +54,7 @@ export default function Contacto() {
           </div>
         </FadeIn>
       </div>
+      <Footer />
     </div>
   )
 }

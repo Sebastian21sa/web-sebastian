@@ -5,6 +5,7 @@ import { iconosStack, coloresStack } from '../../../lib/icons'
 import Nav from '../../../components/Nav'
 import { fraunces, inter } from '../../../lib/fonts'
 import styles from './page.module.css'
+import Footer from '../../../components/Footer'
 
 export function generateStaticParams() {
   return proyectos.map((p) => ({ slug: p.slug }))
@@ -92,6 +93,7 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
