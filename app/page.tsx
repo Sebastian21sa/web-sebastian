@@ -7,6 +7,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import Nav from '../components/Nav'
 import FadeIn from '../components/FadeIn'
 import Footer from '../components/Footer'
+import TiltCard from '../components/TiltCard'
 
 export default function Home() {
   return (
@@ -44,7 +45,7 @@ export default function Home() {
           <div className={styles.listaProyectos}>
             {proyectos.map((p) => (
               <Link key={p.slug} href={`/proyectos/${p.slug}`}>
-                <div className={styles.tarjeta}>
+                <TiltCard className={styles.tarjeta}>
                   <p className={styles.numeroProyecto}>{p.numero}</p>
                   <h3
                     className={`${styles.tituloProyecto} ${fraunces.className}`}
@@ -58,15 +59,12 @@ export default function Home() {
                       const color = coloresStack[t]
                       return (
                         <span key={t} className={styles.stackTag}>
-                          {
-                          Icono && <Icono size={14} 
-                          color= {color}/>
-                          } {t}
+                          {Icono && <Icono size={14} color={color} />} {t}
                         </span>
                       )
                     })}
                   </div>
-                </div>
+                </TiltCard>
               </Link>
             ))}
           </div>

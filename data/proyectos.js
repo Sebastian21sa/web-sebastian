@@ -12,15 +12,24 @@ export const proyectos = [
     elProblema:
       "Jugue tenis de mesa competitivamente durante buena parte de mi vida. Al cursar una especializacion en Inteligencia Artificial, quise construir algo que combinara ambas cosas: aplicar vision por computador y deep learning a un problema donde mi criterio como jugador realmente importa.",
     comoFunciona:
-      "El usuario sube un video (o graba en vivo) ejecutando un drive o un reves. El sistema extrae los puntos clave del cuerpo con MediaPipe Pose, calcula angulos articulares (codo, cadera, altura de muneca) definidos a partir de criterios tecnicos reales de tenis de mesa, y un modelo de red neuronal (TensorFlow), entrenado con un dataset propio de 71 repeticiones grabadas y etiquetadas manualmente, predice si la ejecucion fue correcta o incorrecta.",
+      "El usuario sube un video (o graba en vivo) ejecutando un drive o un reves. El sistema extrae los puntos clave del cuerpo con MediaPipe Pose, calcula angulos articulares (codo, cadera, altura de muneca) definidos a partir de criterios tecnicos reales de tenis de mesa, y un modelo de red neuronal (TensorFlow), entrenado con un dataset propio de 538 repeticiones grabadas y etiquetadas , este predice si la ejecucion fue correcta o incorrecta.",
     resultados: [
-      { label: "Drive (accuracy)", valor: "74% +/- 13%" },
-      { label: "Reves (accuracy)", valor: "76% +/- 15%" },
+      { label: 'Drive (accuracy)', valor: '89.2% +/- 4.7%' },
+      { label: 'Reves (accuracy)', valor: '94.4% +/- 2.7%' },
+      { label: 'Identificador de golpe (accuracy)', valor: '89.2% +/- 5.3%' },
+      { label: 'Dataset total', valor: '538 repeticiones (4 angulos, ambas manos)' },
     ],
     limitaciones: [
-      "Dataset pequeno (71 repeticiones): valida el enfoque, no es suficiente para produccion real.",
-      "Sensibilidad fuera de distribucion: el modelo asume que el usuario selecciona correctamente el golpe.",
-      "Sensibilidad al angulo de camara: dataset ampliandose actualmente a 4 angulos distintos.",
+      'El identificador de tipo de golpe que construi(drive vs reves) tiene ~89% de accuracy, no es perfecto: en aproximadamente 1 de cada 9 casos puede confundir el tipo de golpe, especialmente en repeticiones incorrectas de reves.',
+      'Los datos del jugador zurdo (normalizados con espejo de lateralidad) no se han validado aun con accuracy por separado del resto del dataset - el numero general mezcla diestro y zurdo sin desglosar.',
+      'El angulo del lado opuesto que tome para el dataset tiene una limitacion de visibilidad conocida: en ciertos frames el brazo dominante queda oculto detras del torso, y MediaPipe puede inferir una posicion poco confiable en vez de reportarla como no visible.',
+      'Los criterios de "correcto" e "incorrecto" se basan en mi experiencia propia como jugador, por lo que podria inferir entre un jugador u otro.',
+      'El plan gratuito de hosting impone limites practicos: tamano maximo de video por peticion, y el servicio puede tardar en responder tras periodos de inactividad.',
+    ],
+    imagenes: [
+      { src: '/landmarks-drive.png', alt: 'Landmarks de MediaPipe sobre un drive' },
+      { src: '/landmarks-reves.png', alt: 'Landmarks de MediaPipe sobre un reves' },
+      { src: '/landmarks-frontal.png', alt: 'Landmarks de MediaPipe desde angulo frontal' },
     ],
   },
   {

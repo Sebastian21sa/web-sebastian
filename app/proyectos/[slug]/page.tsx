@@ -6,6 +6,7 @@ import Nav from '../../../components/Nav'
 import { fraunces, inter } from '../../../lib/fonts'
 import styles from './page.module.css'
 import Footer from '../../../components/Footer'
+import AnimatedNumber from '../../../components/AnimatedNumber'
 
 export function generateStaticParams() {
   return proyectos.map((p) => ({ slug: p.slug }))
@@ -50,6 +51,32 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
             )
           })}
         </div>
+        <div className={`${styles.estadisticas} ${styles.contenedor}`}>
+        <div className={styles.estadisticaItem}>
+          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
+            <AnimatedNumber hasta={538} />
+          </p>
+          <p className={styles.estadisticaLabel}>Repeticiones en el dataset</p>
+        </div>
+        <div className={styles.estadisticaItem}>
+          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
+            <AnimatedNumber hasta={95} sufijo="%" />
+          </p>
+          <p className={styles.estadisticaLabel}>Accuracy maximo validado</p>
+        </div>
+        <div className={styles.estadisticaItem}>
+          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
+            <AnimatedNumber hasta={4} />
+          </p>
+          <p className={styles.estadisticaLabel}>Angulos de camara</p>
+        </div>
+        <div className={styles.estadisticaItem}>
+          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
+            <AnimatedNumber hasta={2} />
+          </p>
+          <p className={styles.estadisticaLabel}>Proyectos en produccion</p>
+        </div>
+      </div>
 
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>El problema</h2>
@@ -59,6 +86,18 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Como funciona</h2>
           <p className={styles.parrafo}>{proyecto.comoFunciona}</p>
+          {proyecto.imagenes && (
+            <div className={styles.galeria}>
+              {proyecto.imagenes.map((img) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  className={styles.fotoGaleria}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
         <div className={styles.seccion}>

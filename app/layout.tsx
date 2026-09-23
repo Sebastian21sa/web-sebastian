@@ -19,7 +19,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={inter.className}>{children} <ScrollTop /> </body>
+      <body className={inter.className}>
+        <div className="fondoAnimado"> 
+          <div className="formaFlotante forma1">
+          </div> 
+          <div className="formaFlotante forma2">
+          </div> 
+          <div className="formaFlotante forma3">
+          </div> 
+        </div>
+        {children} <ScrollTop /> </body>
     </html>
   )
 }
