@@ -51,7 +51,7 @@ export default function SobreMi() {
             construyo: con criterio propio, honestidad sobre las
             limitaciones, y ganas genuinas de seguir aprendiendo.
           </p>
-          <a href="/CV-Sebastian-Sanchez.pdf" download className={styles.botonCV}>
+          <a href="/CV-Sebastian-Sanchez.pdf" download className={`${styles.botonCV} efectoVidrio`}>
             Descargar CV
           </a>
         </FadeIn>

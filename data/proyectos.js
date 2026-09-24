@@ -31,6 +31,12 @@ export const proyectos = [
       { src: '/landmarks-reves.png', alt: 'Landmarks de MediaPipe sobre un reves' },
       { src: '/landmarks-frontal.png', alt: 'Landmarks de MediaPipe desde angulo frontal' },
     ],
+    estadisticas: [ 
+      { valor: 538, sufijo: '', label: 'Repeticiones en el dataset' }, 
+      { valor: 95, sufijo: '%', label: 'Accuracy maximo validado' }, 
+      { valor: 4, sufijo: '', label: 'Angulos de camara' }, 
+      { valor: 89, sufijo: '%', label: 'Identificador de golpe' }, 
+    ],
   },
   {
     slug: "simulador-compostaje",
@@ -57,6 +63,12 @@ export const proyectos = [
       "El detector de contaminantes entrena una CNN desde cero sin transfer learning (por restricciones del entorno), lo cual limita su accuracy (71.6%) frente a lo que lograria una arquitectura preentrenada.",
       "Los datasets usados son publicos, no propios: utiles para validar el enfoque, pero no reflejan necesariamente las condiciones especificas de cada usuario real.",
       "Todo el sistema vive dentro de un unico proyecto Next.js, sin backend separado — decision consciente de simplicidad de despliegue.",
+    ],
+    estadisticas: [ 
+      { valor: 452, sufijo: '', label: 'Muestras de sensores reales' }, 
+      { valor: 76, sufijo: '%', label: 'Accuracy del clasificador' }, 
+      { valor: 72, sufijo: '%', label: 'Accuracy detector de contaminantes' }, 
+      { valor: 2, sufijo: '', label: 'Modulos de ML combinados' }, 
     ],
   },
 ];

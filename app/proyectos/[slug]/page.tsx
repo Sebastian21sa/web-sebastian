@@ -51,32 +51,17 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
             )
           })}
         </div>
-        <div className={`${styles.estadisticas} ${styles.contenedor}`}>
-        <div className={styles.estadisticaItem}>
-          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
-            <AnimatedNumber hasta={538} />
-          </p>
-          <p className={styles.estadisticaLabel}>Repeticiones en el dataset</p>
+
+        <div className={styles.estadisticas}>
+          {proyecto.estadisticas.map((stat) => (
+            <div key={stat.label} className={styles.estadisticaItem}>
+              <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
+                <AnimatedNumber hasta={stat.valor} sufijo={stat.sufijo} />
+              </p>
+              <p className={styles.estadisticaLabel}>{stat.label}</p>
+            </div>
+          ))}
         </div>
-        <div className={styles.estadisticaItem}>
-          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
-            <AnimatedNumber hasta={95} sufijo="%" />
-          </p>
-          <p className={styles.estadisticaLabel}>Accuracy maximo validado</p>
-        </div>
-        <div className={styles.estadisticaItem}>
-          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
-            <AnimatedNumber hasta={4} />
-          </p>
-          <p className={styles.estadisticaLabel}>Angulos de camara</p>
-        </div>
-        <div className={styles.estadisticaItem}>
-          <p className={`${styles.estadisticaNumero} ${fraunces.className}`}>
-            <AnimatedNumber hasta={2} />
-          </p>
-          <p className={styles.estadisticaLabel}>Proyectos en produccion</p>
-        </div>
-      </div>
 
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>El problema</h2>
@@ -124,10 +109,20 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
         </div>
 
         <div className={styles.enlaces}>
-          <a href={proyecto.demo} target="_blank" rel="noopener noreferrer" className={`${styles.boton} ${styles.botonPrimario}`}>
+          <a
+            href={proyecto.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.boton} ${styles.botonPrimario} efectoVidrio`}
+          >
             Ver demo en vivo
           </a>
-          <a href={proyecto.repo} target="_blank" rel="noopener noreferrer" className={`${styles.boton} ${styles.botonSecundario}`}>
+          <a
+            href={proyecto.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.boton} ${styles.botonSecundario} efectoVidrio`}
+          >
             Ver repositorio
           </a>
         </div>
