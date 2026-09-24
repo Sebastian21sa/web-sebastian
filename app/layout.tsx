@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import ScrollTop from '../components/ScrollTop'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -28,7 +29,7 @@ export default function RootLayout({
           <div className="formaFlotante forma3">
           </div> 
         </div>
-        {children} <ScrollTop /> </body>
+        {children} <Analytics /><ScrollTop /> </body>
     </html>
   )
 }

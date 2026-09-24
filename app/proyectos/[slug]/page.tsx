@@ -7,6 +7,7 @@ import { fraunces, inter } from '../../../lib/fonts'
 import styles from './page.module.css'
 import Footer from '../../../components/Footer'
 import AnimatedNumber from '../../../components/AnimatedNumber'
+import Image from 'next/image'
 
 export function generateStaticParams() {
   return proyectos.map((p) => ({ slug: p.slug }))
@@ -71,20 +72,18 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Como funciona</h2>
           <p className={styles.parrafo}>{proyecto.comoFunciona}</p>
+          
           {proyecto.imagenes && (
             <div className={styles.galeria}>
               {proyecto.imagenes.map((img) => (
-                <img
-                  key={img.src}
-                  src={img.src}
-                  alt={img.alt}
-                  className={styles.fotoGaleria}
-                />
-              ))}
-            </div>
+                <div
+                  key={img.src} className={styles.fotoGaleriaWrapper}> 
+                  <Image src={img.src} alt={img.alt} fill className={styles.fotoGaleria} /> 
+                </div> 
+              ))} 
+            </div> 
           )}
         </div>
-
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Resultados</h2>
           <table className={styles.tabla}>

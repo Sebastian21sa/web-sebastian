@@ -144,10 +144,16 @@
   margin: 16px 0 30px; 
 } 
 
-.fotoGaleria { 
+.fotoGaleriaWrapper { 
+  position: relative; 
   width: 100%; 
+  aspect-ratio: 16 / 10; 
   border-radius: 12px; 
+  overflow: hidden; 
   border: 1px solid var(--line); 
+} 
+
+.fotoGaleria { 
   object-fit: cover; 
 }
 

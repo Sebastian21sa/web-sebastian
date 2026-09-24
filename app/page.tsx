@@ -8,17 +8,30 @@ import Nav from '../components/Nav'
 import FadeIn from '../components/FadeIn'
 import Footer from '../components/Footer'
 import TiltCard from '../components/TiltCard'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <div className={inter.className}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Joan Sebastian Sanchez Acuna',
+            jobTitle: 'Ingeniero de Sistemas y Computacion',
+            url: 'https://web-sebastian.vercel.app',
+            sameAs: [
+              'https://github.com/Sebastian21sa',
+              'https://www.linkedin.com/in/sebasti%C3%A1n-s%C3%A1nchez-0ab0b6314/',
+            ],
+          }),
+        }}
+      />
       <Nav />
       <section id="inicio" className={`${styles.hero} ${styles.contenedor}`}>
-        <img
-          src="/foto-sebastian.jpg"
-          alt="Sebastian Sanchez, professional portrait in a clean studio setting, wearing a smart casual outfit, looking directly at the camera with a calm and confident expression. The background is softly blurred, creating a simple, modern environment. His image is used as a personal profile photo for a software engineer and AI specialist."
-          className={styles.foto}
-        />
+        <Image src="/foto-sebastian.jpg" alt="Sebastian Sanchez" width={140} height={140} className={styles.foto} />
         <div className={styles.heroTexto}>
           <p className={styles.eyebrow}>
             Ingeniero de Sistemas y computación · Especializacion en IA
