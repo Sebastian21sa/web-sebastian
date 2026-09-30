@@ -9,6 +9,7 @@ import FadeIn from '../components/FadeIn'
 import Footer from '../components/Footer'
 import TiltCard from '../components/TiltCard'
 import Image from 'next/image'
+import ParallaxImage from '../components/ParallaxImage'
 
 export default function Home() {
   return (
@@ -30,23 +31,29 @@ export default function Home() {
         }}
       />
       <Nav />
-      <section id="inicio" className={`${styles.hero} ${styles.contenedor}`}>
-        <Image src="/foto-sebastian.jpg" alt="Sebastian Sanchez" width={140} height={140} className={styles.foto} />
+      <section className={styles.heroContenedor}>
+        <div className={styles.fotoHeroWrapper}>
+          <ParallaxImage
+            src="/foto-hero.png"
+            alt="Sebastian Sanchez"
+            className={styles.fotoHero}
+          />
+        </div>
         <div className={styles.heroTexto}>
-          <p className={styles.eyebrow}>
-            Ingeniero de Sistemas y computación · Especializacion en IA
+          <p className={styles.heroEyebrow}>
+            Ingeniero de Sistemas y Computación · Especialización en IA
           </p>
-          <h1 className={`${styles.titulo} ${fraunces.className}`}>
+          <h1 className={`${styles.heroTitulo} ${fraunces.className}`}>
             Sebastian Sanchez
           </h1>
-          <p className={styles.descripcion}>
-            Construyo sistemas de Machine Learning llevados a producción:
-            desde el dato hasta la API, el frontend y el despliegue.
-            Ex-jugador de tenis de mesa, aplicando codigo a lo que ya conocia
-            de toda la vida.
+          <p className={styles.heroDescripcion}>
+            Construyo sistemas de Machine Learning llevados a producción: desde
+            el dato hasta la API, el frontend y el despliegue. Ex-jugador de
+            tenis de mesa, aplicando código a lo que ya conocía de toda la vida.
           </p>
         </div>
       </section>
+
       <FadeIn>
         <section
           id="proyectos"
