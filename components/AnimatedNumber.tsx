@@ -11,11 +11,21 @@ export default function AnimatedNumber({
   sufijo?: string
   duracionMs?: number
 }) {
-  const [valor, setValor] = useState(0)
+  // El valor inicial es el final: así el HTML del servidor ya trae la cifra real
+  const [valor, setValor] = useState(hasta)
   const ref = useRef<HTMLSpanElement>(null)
   const yaAnimo = useRef(false)
 
   useEffect(() => {
+    // Si la persona pidió menos movimiento, se queda con el valor final
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    // Sin IntersectionObserver tampoco animamos: el valor final ya está puesto
+    if (typeof IntersectionObserver === 'undefined') return
+
+    // Solo en el navegador, y solo si se va a animar, arrancamos desde 0
+    setValor(0)
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !yaAnimo.current) {

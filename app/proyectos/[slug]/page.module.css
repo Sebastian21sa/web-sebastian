@@ -187,3 +187,8 @@
   letter-spacing: 1px; 
   margin-top: 6px; 
 }
+
+.tablaWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

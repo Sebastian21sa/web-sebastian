@@ -18,8 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const proyecto = proyectos.find((p) => p.slug === slug)
 
   return {
-    title: proyecto ? `${proyecto.titulo} - Sebastian Sanchez` : 'Proyecto no encontrado',
+    title: proyecto ? `${proyecto.titulo} – Sebastián Sánchez` : 'Proyecto no encontrado',
     description: proyecto?.resumen,
+    alternates: {
+      canonical: `/proyectos/${slug}`,
+    },
   }
 }
 
@@ -72,30 +75,44 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Cómo funciona</h2>
           <p className={styles.parrafo}>{proyecto.comoFunciona}</p>
-          
+
           {proyecto.imagenes && (
             <div className={styles.galeria}>
               {proyecto.imagenes.map((img) => (
-                <div
-                  key={img.src} className={styles.fotoGaleriaWrapper}> 
-                  <Image src={img.src} alt={img.alt} fill className={styles.fotoGaleria} /> 
-                </div> 
-              ))} 
-            </div> 
+                <div key={img.src} className={styles.fotoGaleriaWrapper}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className={styles.fotoGaleria}
+                  />
+                </div>
+              ))}
+            </div>
           )}
         </div>
+
         <div className={styles.seccion}>
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Resultados</h2>
-          <table className={styles.tabla}>
-            <thead>
-              <tr><th>Métrica</th><th>Valor</th></tr>
-            </thead>
-            <tbody>
-              {proyecto.resultados.map((r) => (
-                <tr key={r.label}><td>{r.label}</td><td>{r.valor}</td></tr>
-              ))}
-            </tbody>
-          </table>
+          <div className={styles.tablaWrapper}>
+            <table className={styles.tabla}>
+              <thead>
+                <tr>
+                  <th>Métrica</th>
+                  <th>Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                {proyecto.resultados.map((r) => (
+                  <tr key={r.label}>
+                    <td>{r.label}</td>
+                    <td>{r.valor}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className={styles.seccion}>

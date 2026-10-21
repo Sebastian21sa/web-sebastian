@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <div className={styles.navContenido}>
-        <Link href="/">Sebastian Sanchez</Link>
+        <Link href="/">Sebastián Sánchez</Link>
 
         <div className={styles.navLinks}>
           <Link href="/#proyectos">Proyectos</Link>
@@ -15,10 +15,22 @@ export default function Nav() {
         </div>
 
         <div className={styles.navIconos}>
-          <a href="https://wa.me/573126841341?text=Hola%2C%20estoy%20interesado%20en%20comunicarme%20contigo" target="_blank" rel="noopener noreferrer" className={styles.navIcono} aria-label="WhatsApp">
+          <a
+            href="https://wa.me/573126841341?text=Hola%2C%20estoy%20interesado%20en%20comunicarme%20contigo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.navIcono}
+            aria-label="WhatsApp"
+          >
             <FaWhatsapp size={20} />
           </a>
-          <a href="https://www.instagram.com/sebastian.sanchez2105" target="_blank" rel="noopener noreferrer" className={styles.navIcono} aria-label="Instagram">
+          <a
+            href="https://www.instagram.com/sebastian.sanchez2105"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.navIcono}
+            aria-label="Instagram"
+          >
             <FaInstagram size={20} />
           </a>
         </div>

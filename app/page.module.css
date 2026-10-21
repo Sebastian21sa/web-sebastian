@@ -358,3 +358,18 @@
     font-size: 34px;
   }
 }
+
+/* ---------- Barra superior: áreas táctiles de 44px ---------- */
+.navIcono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.navLinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
