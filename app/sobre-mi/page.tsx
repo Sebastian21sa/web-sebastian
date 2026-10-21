@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Nav from '../../components/Nav'
 import FadeIn from '../../components/FadeIn'
 import { habilidades } from '../../data/habilidades'
@@ -5,20 +6,49 @@ import { fraunces, inter } from '../../lib/fonts'
 import styles from './page.module.css'
 import Footer from '../../components/Footer'
 
-
-
 export const metadata = {
-  title: 'Sobre mí - Sebastian Sanchez',
-  description: 'Ingeniero de Sistemas y Computación especializado en IA. Conoce mi historia, habilidades y trayectoria.',
+  title: 'Sobre mí – Sebastián Sánchez',
+  description:
+    'Ingeniero de Sistemas y Computación especializado en IA. Conoce mi historia, habilidades y trayectoria.',
 }
 
 const timeline = [
-  { anio: 'Ninez y adolescencia', titulo: 'Jugador de tenis de mesa', desc: 'Entrene y competi activamente, desarrollando el criterio tecnico que mas tarde aplicaria en codigo.' },
-  { anio: '2020', titulo: 'Bachillerato', desc: 'Institucion Educativa Departamental Serrezuela.' },
-  { anio: '2026', titulo: 'Ingenieria de Sistemas y Computación', desc: 'Universidad de Cundinamarca.' },
-  { anio: '2026', titulo: 'Especialización en Inteligencia Artificial', desc: 'Universidad de Cundinamarca.' },
-  { anio: '2026', titulo: 'Analizador de Técnica - Tenis de Mesa', desc: 'Proyecto insignia: visión por computador y deep learning aplicado a mi propio deporte.' },
-  { anio: '2026', titulo: 'Simulador de Compostaje', desc: 'Evolucion de un proyecto academico a un sistema con modelos reales de ML y visión por computador.' },
+  {
+    anio: 'Niñez y adolescencia',
+    titulo: 'Jugador de tenis de mesa',
+    desc: 'Entrené y competí activamente, desarrollando el criterio técnico que más tarde aplicaría en código.',
+  },
+  {
+    anio: '2020',
+    titulo: 'Bachillerato',
+    desc: 'Institución Educativa Departamental Serrezuela.',
+  },
+  {
+    anio: '2026',
+    titulo: 'Ingeniería de Sistemas y Computación',
+    desc: 'Universidad de Cundinamarca.',
+  },
+  {
+    anio: '2026',
+    titulo: 'Especialización en Inteligencia Artificial',
+    desc: 'Universidad de Cundinamarca.',
+  },
+  {
+    anio: '2026',
+    titulo: 'Analizador de Técnica – Tenis de Mesa',
+    desc: 'Proyecto insignia: visión por computador y deep learning aplicado a mi propio deporte.',
+  },
+  {
+    anio: '2026',
+    titulo: 'Simulador de Compostaje',
+    desc: 'Evolución de un proyecto académico a un sistema con modelos reales de ML y visión por computador.',
+  },
+]
+
+const galeria = [
+  { src: '/galeria-1.jpg', alt: 'Sebastián jugando tenis de mesa' },
+  { src: '/galeria-2.png', alt: 'Sebastián trabajando' },
+  { src: '/galeria-3.jpeg ', alt: 'Sebastián' },
 ]
 
 export default function SobreMi() {
@@ -32,26 +62,30 @@ export default function SobreMi() {
             Soy Sebastián, Ingeniero de Sistemas y Computación con
             especialización en Inteligencia Artificial. Jugué tenis de mesa
             competitivamente durante buena parte de mi vida, desde niño hasta
-            la adolescencia, y ese fue el punto de partida real de mi interés por la tecnología y la programación: como jugador, siempre
-            busqué mejorar mi juego, y eso me llevó a explorar cómo la tecnología
-            podía ayudarme a hacerlo. De ahí nació poniq: un proyecto que conceptualizaba
-            aplicar visión por computador y deep learning
-            a algo que ya conocia de primera mano.
+            la adolescencia, y ese fue el punto de partida real de mi interés
+            por la tecnología y la programación: como jugador, siempre busqué
+            mejorar mi juego, y eso me llevó a explorar cómo la tecnología
+            podía ayudarme a hacerlo. De ahí nació PongIQ, un proyecto que
+            aplica visión por computador y deep learning a algo que ya conocía
+            de primera mano.
           </p>
           <p className={styles.parrafo}>
             Me interesa construir sistemas completos, no solo modelos
-            entrenados en un notebook: desde la recoleccion y etiquetado de
+            entrenados en un notebook: desde la recolección y etiquetado de
             datos, pasando por el entrenamiento, hasta la API, el frontend, y
-            el despliegue en produccion con practicas reales de ingenieria
+            el despliegue en producción con prácticas reales de ingeniería
             (testing automatizado, CI/CD, contenedores con Docker).
           </p>
           <p className={styles.parrafo}>
-            Este portafolio (junto con
-            cada proyecto documentado en el) es el registro real de como
-            construyo: con criterio propio, honestidad sobre las
-            limitaciones, y ganas genuinas de seguir aprendiendo.
+            Este portafolio (junto con cada proyecto documentado en él) es el
+            registro real de cómo construyo: con criterio propio, honestidad
+            sobre las limitaciones, y ganas genuinas de seguir aprendiendo.
           </p>
-          <a href="/CV-Sebastian-Sanchez.pdf" download className={`${styles.botonCV} efectoVidrio`}>
+          <a
+            href="/CV-Sebastian-Sanchez.pdf"
+            download
+            className={`${styles.botonCV} efectoVidrio`}
+          >
             Descargar CV
           </a>
         </FadeIn>
@@ -93,24 +127,20 @@ export default function SobreMi() {
 
         <FadeIn>
           <h2 className={`${styles.tituloSub} ${fraunces.className}`}>
-            Un poco mas de mí
+            Un poco más de mí
           </h2>
           <div className={styles.galeria}>
-            <img
-              src="/galeria-1.jpg"
-              alt="Sebastian jugando tenis de mesa"
-              className={styles.fotoGaleria}
-            />
-            <img
-              src="/galeria-2.jpg"
-              alt="Sebastian trabajando"
-              className={styles.fotoGaleria}
-            />
-            <img
-              src="/galeria-3.jpg"
-              alt="Sebastian"
-              className={styles.fotoGaleria}
-            />
+            {galeria.map((foto) => (
+              <div key={foto.src} className={styles.fotoGaleriaWrapper}>
+                <Image
+                  src={foto.src}
+                  alt={foto.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className={styles.fotoGaleria}
+                />
+              </div>
+            ))}
           </div>
         </FadeIn>
       </div>

@@ -5,6 +5,12 @@ import { fraunces, inter } from '../../lib/fonts'
 import styles from './page.module.css'
 import Footer from '../../components/Footer'
 
+export const metadata = {
+  title: 'Contacto – Sebastián Sánchez',
+  description:
+    'Escríbeme para oportunidades como ingeniero de software y machine learning, colaboraciones o para charlar sobre tecnología, IA y tenis de mesa.',
+}
+
 export default function Contacto() {
   return (
     <div className={inter.className}>
@@ -13,39 +19,75 @@ export default function Contacto() {
         <FadeIn>
           <h1 className={`${styles.titulo} ${fraunces.className}`}>Hablemos</h1>
           <p className={styles.parrafo}>
-            Si algo de lo que viste en este portafolio
-            resuena contigo, o simplemente quieres conectar, aqui me
-            encuentras, contactame, o agregame en alguna de estas redes. Siempre estoy abierto a
-            nuevas oportunidades, colaboraciones, o simplemente a charlar sobre
-            tecnologia, IA, o tenis de mesa.
+            Si algo de lo que viste en este portafolio resuena contigo, o
+            simplemente quieres conectar, aquí me encuentras. Contáctame o
+            agrégame en alguna de estas redes. Siempre estoy abierto a nuevas
+            oportunidades, colaboraciones, o simplemente a charlar sobre
+            tecnología, IA, o tenis de mesa.
           </p>
           <div className={styles.opcionesContacto}>
-            <a href="mailto:sebastian2105sanchez@gmail.com" className={styles.opcionContacto}>
-              <FaEnvelope size={22} className={styles.iconoContacto} style={{ color: 'var(--accent-4)' }} />
+            <a
+              href="mailto:sebastian2105sanchez@gmail.com"
+              className={styles.opcionContacto}
+            >
+              <FaEnvelope
+                size={22}
+                className={styles.iconoContacto}
+                style={{ color: 'var(--accent-4)' }}
+              />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>Email</span>
-                <span className={styles.valorContacto}>sebastian2105sanchez@gmail.com</span>
+                <span className={styles.valorContacto}>
+                  sebastian2105sanchez@gmail.com
+                </span>
               </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-s%C3%A1nchez-0ab0b6314/" target="_blank" rel="noopener noreferrer" className={styles.opcionContacto}>
-              <FaLinkedin size={22} className={styles.iconoContacto} style={{ color: '#0A66C2' }} />
+            <a
+              href="https://www.linkedin.com/in/sebasti%C3%A1n-s%C3%A1nchez-0ab0b6314/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.opcionContacto}
+            >
+              <FaLinkedin
+                size={22}
+                className={styles.iconoContacto}
+                style={{ color: '#4A9BE8' }}
+              />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>LinkedIn</span>
                 <span className={styles.valorContacto}>Sebastián Sánchez</span>
               </div>
             </a>
 
-            <a href="https://github.com/Sebastian21sa" target="_blank" rel="noopener noreferrer" className={styles.opcionContacto}>
-              <FaGithub size={22} className={styles.iconoContacto} style={{ color: 'var(--ink)' }} />
+            <a
+              href="https://github.com/Sebastian21sa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.opcionContacto}
+            >
+              <FaGithub
+                size={22}
+                className={styles.iconoContacto}
+                style={{ color: 'var(--ink)' }}
+              />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>GitHub</span>
-                <span className={styles.valorContacto}>Sebastián Sánchez</span>
+                <span className={styles.valorContacto}>Sebastian21sa</span>
               </div>
             </a>
 
-            <a href="https://www.instagram.com/sebastian.sanchez2105" target="_blank" rel="noopener noreferrer" className={styles.opcionContacto}>
-              <FaInstagram size={22} className={styles.iconoContacto} style={{ color: '#E1306C' }} />
+            <a
+              href="https://www.instagram.com/sebastian.sanchez2105"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.opcionContacto}
+            >
+              <FaInstagram
+                size={22}
+                className={styles.iconoContacto}
+                style={{ color: '#E1306C' }}
+              />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>Instagram</span>
                 <span className={styles.valorContacto}>sebastian.sanchez2105</span>
