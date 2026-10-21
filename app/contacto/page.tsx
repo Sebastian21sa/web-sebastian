@@ -32,7 +32,7 @@ export default function Contacto() {
               <FaLinkedin size={22} className={styles.iconoContacto} style={{ color: '#0A66C2' }} />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>LinkedIn</span>
-                <span className={styles.valorContacto}>Sebastian Sanchez</span>
+                <span className={styles.valorContacto}>Sebastián Sánchez</span>
               </div>
             </a>
 
@@ -40,7 +40,7 @@ export default function Contacto() {
               <FaGithub size={22} className={styles.iconoContacto} style={{ color: 'var(--ink)' }} />
               <div className={styles.textoContacto}>
                 <span className={styles.labelContacto}>GitHub</span>
-                <span className={styles.valorContacto}>Sebastian21sa</span>
+                <span className={styles.valorContacto}>Sebastián Sánchez</span>
               </div>
             </a>
 

@@ -8,17 +8,17 @@ import Footer from '../../components/Footer'
 
 
 export const metadata = {
-  title: 'Sobre mi - Sebastian Sanchez',
-  description: 'Ingeniero de Sistemas y Computacion especializado en IA. Conoce mi historia, habilidades y trayectoria.',
+  title: 'Sobre mí - Sebastian Sanchez',
+  description: 'Ingeniero de Sistemas y Computación especializado en IA. Conoce mi historia, habilidades y trayectoria.',
 }
 
 const timeline = [
   { anio: 'Ninez y adolescencia', titulo: 'Jugador de tenis de mesa', desc: 'Entrene y competi activamente, desarrollando el criterio tecnico que mas tarde aplicaria en codigo.' },
   { anio: '2020', titulo: 'Bachillerato', desc: 'Institucion Educativa Departamental Serrezuela.' },
-  { anio: '2026', titulo: 'Ingenieria de Sistemas y Computacion', desc: 'Universidad de Cundinamarca.' },
-  { anio: '2026', titulo: 'Especializacion en Inteligencia Artificial', desc: 'Universidad de Cundinamarca.' },
-  { anio: '2026', titulo: 'Analizador de Tecnica - Tenis de Mesa', desc: 'Proyecto insignia: vision por computador y deep learning aplicado a mi propio deporte.' },
-  { anio: '2026', titulo: 'Simulador de Compostaje', desc: 'Evolucion de un proyecto academico a un sistema con modelos reales de ML y vision por computador.' },
+  { anio: '2026', titulo: 'Ingenieria de Sistemas y Computación', desc: 'Universidad de Cundinamarca.' },
+  { anio: '2026', titulo: 'Especialización en Inteligencia Artificial', desc: 'Universidad de Cundinamarca.' },
+  { anio: '2026', titulo: 'Analizador de Técnica - Tenis de Mesa', desc: 'Proyecto insignia: visión por computador y deep learning aplicado a mi propio deporte.' },
+  { anio: '2026', titulo: 'Simulador de Compostaje', desc: 'Evolucion de un proyecto academico a un sistema con modelos reales de ML y visión por computador.' },
 ]
 
 export default function SobreMi() {
@@ -27,15 +27,15 @@ export default function SobreMi() {
       <Nav />
       <div className={styles.contenedor}>
         <FadeIn>
-          <h1 className={`${styles.titulo} ${fraunces.className}`}>Sobre mi</h1>
+          <h1 className={`${styles.titulo} ${fraunces.className}`}>Sobre mí</h1>
           <p className={styles.parrafo}>
-            Soy Sebastian, Ingeniero de Sistemas y Computacion con
-            especializacion en Inteligencia Artificial. Jugue tenis de mesa
+            Soy Sebastián, Ingeniero de Sistemas y Computación con
+            especialización en Inteligencia Artificial. Jugué tenis de mesa
             competitivamente durante buena parte de mi vida, desde niño hasta
-            la adolescencia, y ese fue el punto de partida real de mi interes por la tecnologia y la programacion: como jugador, siempre
-            busque mejorar mi juego, y eso me llevo a explorar como la tecnologia
-            podia ayudarme a hacerlo. De ahi nacio poniq: un proyecto que conceptualizaba
-            aplicar vision por computador y deep learning
+            la adolescencia, y ese fue el punto de partida real de mi interés por la tecnología y la programación: como jugador, siempre
+            busqué mejorar mi juego, y eso me llevó a explorar cómo la tecnología
+            podía ayudarme a hacerlo. De ahí nació poniq: un proyecto que conceptualizaba
+            aplicar visión por computador y deep learning
             a algo que ya conocia de primera mano.
           </p>
           <p className={styles.parrafo}>
@@ -93,7 +93,7 @@ export default function SobreMi() {
 
         <FadeIn>
           <h2 className={`${styles.tituloSub} ${fraunces.className}`}>
-            Un poco mas de mi
+            Un poco mas de mí
           </h2>
           <div className={styles.galeria}>
             <img

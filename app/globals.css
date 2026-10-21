@@ -138,3 +138,32 @@ a {
 .efectoVidrio:active {
   transform: translateY(0) scale(0.98);
 }
+
+/* ---------- Accesibilidad: foco visible ---------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Accesibilidad: movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .efectoVidrio:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Hover solo en dispositivos con mouse ---------- */
+@media (hover: none) {
+  .efectoVidrio:hover {
+    transform: none;
+  }
+}

@@ -10,7 +10,7 @@ export default function Nav() {
 
         <div className={styles.navLinks}>
           <Link href="/#proyectos">Proyectos</Link>
-          <Link href="/sobre-mi">Sobre mi</Link>
+          <Link href="/sobre-mi">Sobre mí</Link>
           <Link href="/contacto">Contacto</Link>
         </div>
 

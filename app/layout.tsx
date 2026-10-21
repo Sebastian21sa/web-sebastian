@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Sebastian Sanchez - Portafolio',
-  description: 'Ingeniero de Sistemas y Computacion - Especializacion en IA',
+  title: 'Sebastián Sánchez - Portafolio',
+  description: 'Ingeniero de Sistemas y Computación -Especialización en IA',
 }
 
 export default function RootLayout({

@@ -16,6 +16,9 @@ export default function TiltCard({
   function manejarMovimiento(e: React.MouseEvent<HTMLDivElement>) {
     if (!ref.current) return
 
+    // Si la persona pidió menos movimiento, no inclinamos la tarjeta
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const rect = ref.current.getBoundingClientRect()
     const x = e.clientX - rect.left
     const y = e.clientY - rect.top

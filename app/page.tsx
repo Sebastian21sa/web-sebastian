@@ -20,8 +20,8 @@ export default function Home() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            name: 'Joan Sebastian Sanchez Acuna',
-            jobTitle: 'Ingeniero de Sistemas y Computacion',
+            name: 'Joan Sebastián Sánchez Acuna',
+            jobTitle: 'Ingeniero de Sistemas y Computación',
             url: 'https://web-sebastian.vercel.app',
             sameAs: [
               'https://github.com/Sebastian21sa',
@@ -32,7 +32,7 @@ export default function Home() {
       />
       <Nav />
       <section className={styles.heroFullBleed}> 
-      <ParallaxImage src="/foto-hero-montana.jpg" alt="Sebastian Sanchez" className={styles.fotoHeroFull} /> 
+      <ParallaxImage src="/foto-hero-montana.jpg" alt="Sebastián Sánchez" className={styles.fotoHeroFull} /> 
         <div className={styles.heroDegradadoSuperior}>
         </div> 
         <div className={styles.heroDegradado}>
@@ -42,7 +42,7 @@ export default function Home() {
             className={styles.heroEyebrow}>Ingeniero de Sistemas y Computación · Especialización en IA
           </p> 
           <h1 className={`${styles.heroTitulo} ${fraunces.className}`}>
-            Sebastian Sanchez
+            Sebastián Sánchez
           </h1> 
           <p className={styles.heroDescripcion}> 
             Construyo sistemas de Machine Learning llevados a producción: desde el dato hasta la API, el frontend y el despliegue. Ex-jugador de tenis de mesa, aplicando código a lo que ya conocía de toda la vida. 

@@ -70,7 +70,7 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
         </div>
 
         <div className={styles.seccion}>
-          <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Como funciona</h2>
+          <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Cómo funciona</h2>
           <p className={styles.parrafo}>{proyecto.comoFunciona}</p>
           
           {proyecto.imagenes && (
@@ -88,7 +88,7 @@ export default async function ProyectoDetalle({ params }: { params: Promise<{ sl
           <h2 className={`${styles.seccionTitulo} ${fraunces.className}`}>Resultados</h2>
           <table className={styles.tabla}>
             <thead>
-              <tr><th>Metrica</th><th>Valor</th></tr>
+              <tr><th>Métrica</th><th>Valor</th></tr>
             </thead>
             <tbody>
               {proyecto.resultados.map((r) => (
