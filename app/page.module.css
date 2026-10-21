@@ -36,11 +36,6 @@
   display: block;
 }
 
-.heroTexto {
-  flex: 1;
-  min-width: 280px;
-}
-
 .eyebrow {
   font-size: 15px;
   color: var(--accent);
@@ -281,31 +276,49 @@
   z-index: 50;
 }
 
-.heroContenedor {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 70px 24px 50px;
-  flex-wrap: wrap;
-}
-
-.fotoHeroWrapper {
+.heroFullBleed {
   position: relative;
-  width: 340px;
-  height: 440px;
-  border-radius: 20px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  aspect-ratio: 21 / 9;
+  max-height: 720px;
+  min-height: 380px;
   overflow: hidden;
-  flex-shrink: 0;
-  border: 1px solid var(--line);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  animation: heroEntrada 0.9s ease;
 }
 
-.fotoHero {
-  object-fit: cover;
-  object-position: center top;
+.fotoHeroFull { 
+  object-fit: cover; 
+  object-position: center top; 
+  filter: brightness(1.22); 
+}
+
+.heroDegradadoSuperior { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  height: 100px; 
+  background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%); 
+  z-index: 1; 
+}
+
+.heroDegradado { 
+  position: absolute; 
+  inset: 0; 
+  background: linear-gradient( to top, var(--bg) 12%, rgba(30, 37, 48, 0.85) 38%, rgba(30, 37, 48, 0.3) 68%, transparent 100% ); 
+  z-index: 1; 
+}
+
+.heroTextoOverlay {
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 24px;
+  max-width: 780px;
+  margin: 0 auto;
+  animation: heroEntrada 0.9s ease;
 }
 
 .heroEyebrow {
@@ -341,18 +354,6 @@
 }
 
 @media (max-width: 780px) {
-  .heroContenedor {
-    flex-direction: column;
-    text-align: left;
-    padding: 50px 24px 30px;
-  }
-
-  .fotoHeroWrapper {
-    width: 100%;
-    max-width: 300px;
-    height: 380px;
-  }
-
   .heroTitulo {
     font-size: 34px;
   }

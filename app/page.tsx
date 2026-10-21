@@ -31,29 +31,24 @@ export default function Home() {
         }}
       />
       <Nav />
-      <section className={styles.heroContenedor}>
-        <div className={styles.fotoHeroWrapper}>
-          <ParallaxImage
-            src="/foto-hero.png"
-            alt="Sebastian Sanchez"
-            className={styles.fotoHero}
-          />
-        </div>
-        <div className={styles.heroTexto}>
-          <p className={styles.heroEyebrow}>
-            Ingeniero de Sistemas y Computación · Especialización en IA
-          </p>
+      <section className={styles.heroFullBleed}> 
+      <ParallaxImage src="/foto-hero-montana.jpg" alt="Sebastian Sanchez" className={styles.fotoHeroFull} /> 
+        <div className={styles.heroDegradadoSuperior}>
+        </div> 
+        <div className={styles.heroDegradado}>
+        </div> 
+        <div className={styles.heroTextoOverlay}> 
+          <p 
+            className={styles.heroEyebrow}>Ingeniero de Sistemas y Computación · Especialización en IA
+          </p> 
           <h1 className={`${styles.heroTitulo} ${fraunces.className}`}>
             Sebastian Sanchez
-          </h1>
-          <p className={styles.heroDescripcion}>
-            Construyo sistemas de Machine Learning llevados a producción: desde
-            el dato hasta la API, el frontend y el despliegue. Ex-jugador de
-            tenis de mesa, aplicando código a lo que ya conocía de toda la vida.
-          </p>
-        </div>
+          </h1> 
+          <p className={styles.heroDescripcion}> 
+            Construyo sistemas de Machine Learning llevados a producción: desde el dato hasta la API, el frontend y el despliegue. Ex-jugador de tenis de mesa, aplicando código a lo que ya conocía de toda la vida. 
+          </p> 
+        </div> 
       </section>
-
       <FadeIn>
         <section
           id="proyectos"
