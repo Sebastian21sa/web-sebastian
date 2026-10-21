@@ -3,12 +3,10 @@ import { proyectos } from '../data/proyectos'
 import { fraunces, inter } from '../lib/fonts'
 import styles from './page.module.css'
 import { iconosStack, coloresStack } from '../lib/icons'
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa'
 import Nav from '../components/Nav'
 import FadeIn from '../components/FadeIn'
 import Footer from '../components/Footer'
 import TiltCard from '../components/TiltCard'
-import Image from 'next/image'
 import ParallaxImage from '../components/ParallaxImage'
 
 export default function Home() {
@@ -20,7 +18,7 @@ export default function Home() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
-            name: 'Joan Sebastián Sánchez Acuna',
+            name: 'Joan Sebastián Sánchez Acuña',
             jobTitle: 'Ingeniero de Sistemas y Computación',
             url: 'https://web-sebastian.vercel.app',
             sameAs: [
@@ -31,24 +29,31 @@ export default function Home() {
         }}
       />
       <Nav />
-      <section className={styles.heroFullBleed}> 
-      <ParallaxImage src="/foto-hero-montana.jpg" alt="Sebastián Sánchez" className={styles.fotoHeroFull} /> 
-        <div className={styles.heroDegradadoSuperior}>
-        </div> 
-        <div className={styles.heroDegradado}>
-        </div> 
-        <div className={styles.heroTextoOverlay}> 
-          <p 
-            className={styles.heroEyebrow}>Ingeniero de Sistemas y Computación · Especialización en IA
-          </p> 
+
+      <section className={styles.heroFullBleed}>
+        <div className={styles.heroFoto}>
+          <ParallaxImage
+            src="/foto-hero-montana.jpg"
+            alt="Sebastián Sánchez"
+            className={styles.fotoHeroFull}
+          />
+          <div className={styles.heroDegradadoSuperior}></div>
+          <div className={styles.heroDegradado}></div>
+        </div>
+
+        <div className={styles.heroTextoOverlay}>
+          <p className={styles.heroEyebrow}>
+            Ingeniero de Sistemas y Computación · Especialización en IA
+          </p>
           <h1 className={`${styles.heroTitulo} ${fraunces.className}`}>
             Sebastián Sánchez
-          </h1> 
-          <p className={styles.heroDescripcion}> 
-            Construyo sistemas de Machine Learning llevados a producción: desde el dato hasta la API, el frontend y el despliegue. Ex-jugador de tenis de mesa, aplicando código a lo que ya conocía de toda la vida. 
-          </p> 
-        </div> 
+          </h1>
+          <p className={styles.heroDescripcion}>
+            Construyo sistemas de Machine Learning llevados a producción: desde el dato hasta la API, el frontend y el despliegue. Ex-jugador de tenis de mesa, aplicando código a lo que ya conocía de toda la vida.
+          </p>
+        </div>
       </section>
+
       <FadeIn>
         <section
           id="proyectos"
